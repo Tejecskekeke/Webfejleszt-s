@@ -1,0 +1,330 @@
+<!DOCTYPE html> 
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tempfli Előd">
+    <meta name="description" content="Lovagkiképző Tábor - Kalandra fel!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="beadando.css">
+    <title>Lovagkiképző Tábor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link rel="icon" href="kepek/fvicon.png" sizes="32x32" type="image/x-icon">
+    <script src="jquery-3.7.1.js"></script>
+    <script src="validJQ/dist/jquery.validate.js"> </script>
+</head>
+<body>
+  <header class="flex-header">
+    <h1>Lovagkiképző Tábor</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="tabor.html">Tábor</a></li>
+            <li><a href="Ellenfelek.html">Ellenfelek</a></li>
+            <li id="current"><a href="#">Jelentkezés</a></li>
+        </ul>
+    </nav>
+  </header>
+  <form method="post" id="myform" action="http://szamtud.uni-corvinus.hu/receive.php">
+    <table>
+      <tr>
+        <td><h1>Lovagi képzés jelentkezés</h1></td>
+      </tr>
+      <tr>
+        <td>
+          <p><label>Név:
+          <input type="text" name="nev" size="25" id="nev"></label>
+          </p>
+          <p><label>Email:
+          <input type="email" name="email" size="23" id="email"></label>
+          </p>
+          <p><label>Jelszó:
+          <input type="password" name="jelszo" size="23" id="jelszo"></label>
+          </p>
+          <p><label>Telefonszám:
+          <input type="tel" name="tel" size="18" value="06-" id="tel"></label>
+          </p>
+          <p><label>Születési dátum: 
+          <input type="date" name="szuletes" id="szuletes"></label>
+          </p>
+          <p><label>Nem:
+          <input type="radio" name="neme" value="F">
+          Férfi </label>
+          <label>Nő
+          <input type="radio" name="neme" value="N">
+          </label><label>Egyéb
+          <input type="radio" name="neme" value="Egy" checked>
+          </label>
+          </p>
+          
+          <label>Melyik várban szeretnéd tölteni a kiképzésed?
+            <select name="Var">
+              <option value="TiszaD">Tiszaderzsi Vár</option>
+              <option value="Sitke">Sitkei</option>
+              <option value="Noszvaj">Noszvaji Vár</option>
+              <option value="Balatoni">Notalabi Vár</option>
+            </select></label>
+          </td>
+      </tr>
+      <tr>
+        <td><h2>Milyen fegyverekre szeretnél kiképzést?</h2></td>
+      </tr>
+      <tr>
+        <td>
+      <label><input type="checkbox" name="targy1" value="ON">
+        Kard</label><br>
+      <label><input type="checkbox" name="targy2" value="ON">
+        Lándzsa</label><br>
+      <label><input type="checkbox" name="targy3" value="ON">
+        Buzogány</label><br>
+      <label><input type="checkbox" name="targy4" value="ON">
+        Csatabárd</label><br>
+      <label><input type="checkbox" name="targy5" value="ON">
+        Pallos</label><br>
+      <label><input type="checkbox" name="targy6" value="ON">
+        Íj</label><br>
+      <label><input type="checkbox" name="targy7" value="ON">
+        Számszeríj</label><br>
+        </td>
+      </tr>
+      <tr>
+        <td><h2>Ebédrendelés</h2></td>
+      </tr>
+      <tr><td>Főfogások: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Italok:</td></tr>
+      <tr>
+        <td >
+          <label>Hétfő:
+          <select name="eH" id="eH">
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="iH" id="iH">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br>
+          <label>Kedd:
+          <select name="etelKedd" id="eK">
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="italKedd" id="iK">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br>
+          <label>Szerda:
+          <select name="etelSzerda" id="eSZ">
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="italSzerda" id="iSZ">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br>
+          <label>Csütörtök:
+          <select name="etelCsutortok" id="eCS">
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="italCsutortok" id="iCS">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br>
+          <label>Péntek:
+          <select name="etelPentek" id="eP" >
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="italPentek" id="iP">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br>
+          <label>Szombat:
+          <select name="etelSzombat" id="eSZO">
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="italSzombat" id="iSZO">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br>
+          <label>Vasárnap:
+          <select name="etelVasarnap" id="eV">
+            <option value="Anyu">Anyu Pakol</option>
+            <option value="PancelPud">Páncél Puding</option>
+            <option value="TáltosT">Táltos Torta</option>
+            <option value="LándzsaS">Lándzsa Saláta</option>
+            <option value="BuzaviragB">Buzavirág Bifsztek</option>
+            <option value="SarkanyS">Sárkány Sültkrumpli</option>
+            <option value="GriffmadarG">Griffmadár Gulyás</option>
+          </select></label>
+          <select name="italVasarnap" id="iV">
+            <option value="sor">Szomjoltó Sör</option>
+            <option value="bor">Bátor Bor</option>
+            <option value="cola">Kacagó Kóla</option>
+            <option value="viz">Csap víz</option>
+          </select>
+          <br><br>
+        </td> 
+        </tr>
+        <tr>
+        <td >
+          <p id="osszeg">Fizetendő összeg: </p>
+        <input type="submit" value="Jelentkezés és Fizetés" name="submit">
+        <input type="reset" value="Alaphelyzet" name="reset">
+        </td>
+        </tr>
+    </table>
+  </form>
+  <footer class="flex-footer">
+    <aside class="lablec">
+        <h3>Kapcsolat</h3>
+        <ul>
+            <li><em>elod.tempfli@gmail.com</em></li>
+            <li><em>Telefon: +36 30 123 4567</em></li>
+        </ul>
+    </aside>
+    <aside class="lablec">
+        <h3>Kövess minket</h3>
+        <ul>
+            <li>Instagram: <em>@lovagok_kiképzése</em></li>
+            <li>Facebook: <em>Lovagkiképző Tábor</em></li>
+            <li>Twitter: <em>@kikepzo_lovagok</em></li>
+        </ul>
+    </aside>
+    <aside class="nocopy">
+        <p><em>Minden jog fenntartva &copy; 2023 Lovagkiképző Tábor</em></p>
+    </aside>
+</footer>
+<script>
+    $("#myform").validate ({
+      rules: {
+        nev: "required",
+        szuletes: "required",
+        tel: {
+          minlength:10,
+          required:true,
+        },
+        email: {
+          required: true,
+          email: true
+        },
+        jelszo: {
+          required: true,
+          minlength: 6
+        },
+      },
+      messages: {
+      nev: " Írd be a neved!",
+      tel:"Adj meg egy telefonoszámot!",
+      szuletes: "Adjon meg egy születési évet!",
+      jelszo: {
+        required: " Add meg a jelszavad!",
+        minlength: " A jelszavad legalább 6 karakter hosszú legyen!"
+      },
+      email: " Kérlek valós email címet adj meg!",
+            submit: " Kérlek fogadd el a feltételeinket!", 
+      },
+     });
+</script>
+<script>
+    var eH = document.getElementById("eH");
+    var iH = document.getElementById("iH");
+    var eK = document.getElementById("eK");
+    var iK = document.getElementById("iK");
+    var eSZ = document.getElementById("eSZ");
+    var iSZ = document.getElementById("iSZ");
+    var eCS = document.getElementById("eCS");
+    var iCS = document.getElementById("iCS");
+    var eP = document.getElementById("eP");
+    var iP = document.getElementById("iP");
+    var eSZO = document.getElementById("eSZO");
+    var iSZO = document.getElementById("iSZO");
+    var eV = document.getElementById("eV");
+    var iV = document.getElementById("iV");
+    var osszegElem = document.getElementById("osszeg");
+    szamolOsszeget()
+    eH.addEventListener("click", szamolOsszeget);
+    iH.addEventListener("click", szamolOsszeget);
+    eK.addEventListener("click", szamolOsszeget);
+    iK.addEventListener("click", szamolOsszeget);
+    eSZ.addEventListener("click", szamolOsszeget);
+    iSZ.addEventListener("click", szamolOsszeget);
+    eCS.addEventListener("click", szamolOsszeget);
+    iCS.addEventListener("click", szamolOsszeget);
+    eP.addEventListener("click", szamolOsszeget);
+    iP.addEventListener("click", szamolOsszeget);
+    eSZO.addEventListener("click", szamolOsszeget);
+    iSZO.addEventListener("click", szamolOsszeget);
+    eV.addEventListener("click", szamolOsszeget);
+    iV.addEventListener("click", szamolOsszeget);
+    function szamolOsszeget() {
+      var etelArak = {
+        "Anyu": 0,
+        "PancelPud": 1500,
+        "TáltosT": 3700,
+        "LándzsaS": 1800,
+        "BuzaviragB": 4000,
+        "SarkanyS": 1200,
+        "GriffmadarG": 2500,
+      };
+      
+      var italArak = {
+        "sor": 0,
+        "bor": 2000,
+        "cola": 1500,
+        "viz": 1000,
+      };
+      var fizetendoOsszeg = etelArak[eH.value] + italArak[iH.value] + etelArak[eK.value] + italArak[iK.value] + etelArak[eSZ.value] + italArak[iSZ.value] + etelArak[eCS.value] + italArak[iCS.value] + etelArak[eP.value] + italArak[iP.value] + etelArak[eSZO.value] + italArak[iSZO.value] + etelArak[eV.value] + italArak[iV.value] ;
+
+      osszegElem.innerHTML = "Fizetendő összeg: " + fizetendoOsszeg + " Ft";
+    }
+  </script>
+</body> 
+</html>

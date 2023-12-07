@@ -1,0 +1,243 @@
+table {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+td {
+    padding: 10px;
+    text-align: center;
+}
+@font-face {
+    font-family: 'sajat';
+    src: url('Fontstyle/MedievalSharp-Regular.ttf');
+}
+
+
+body {
+    font-family: 'sajat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 242, 233);
+}
+
+.flex-header {
+    background-image: url('kepek/lovagok.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 2em; 
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px; 
+}
+
+nav {
+    background-color: transparent; 
+    color: white;
+    text-align: center;
+    padding: 1em; 
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(85, 85, 85, 0.60); 
+    border-radius: 5px;
+}
+nav #current a {
+    background-color: #1a1a1a; 
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.kastely{
+    max-width: 95%;
+    margin:10px;
+}
+.terkep{
+    max-width: 47.5%;
+}
+
+.flex-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.fo_szoveg {
+    flex: 1;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.fo_szoveg p {
+    line-height: 1.6;
+}
+
+.reklam_cim {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+.reklam {
+    flex: 1;
+    background-color: #fff;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-basis: 70%;
+    max-width: 60%;
+    align-content: center;
+    text-align: center;
+}
+label.error {
+    color: #d50f16;
+   }
+.reklam_link {
+    text-decoration: none;
+    color: #333;
+}
+
+.reklam_kep {
+    max-width: 400px;
+    float: right;
+    margin: 10px;
+    padding-top: 15px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+.lablec {
+    flex: 1; 
+}
+
+.nocopy {
+    flex: 1;
+}
+
+/* Telefonos nézet */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin-bottom: 25px;
+;
+    }
+    .kastely{
+        max-width: 300px;
+    }
+    .terkep{
+        max-width: 147px;
+    }
+    nav a {
+        margin: 5px auto; 
+        text-align: center;
+        padding: 10px;
+        font-size: 1.2em; 
+        background-color: rgba(85, 85, 85, 0.6);
+        border-radius: 5px;       
+    }
+    .reklam{
+        text-align: center;
+    }
+    .reklam_kep {
+        width: 80%;
+        display: block; 
+        margin: 20px 10% 20px 20px;
+    }
+    #images{
+        margin-top: auto;
+        width: 400px;
+        height: 300px;
+        }
+        
+}
+/* Tablet */
+@media (max-width: 768px) {
+    .reklam_cim, .reklam {
+        max-width: 100%;
+    }
+    .reklam_kep {
+        max-width: 300px;
+    }
+    #images{
+        margin:auto;
+        width: 60vw;
+        height: 45vw;
+    }
+} 
+/* Laptop */
+@media (min-width: 768px) {
+    .flex-main {
+        justify-content: space-between;
+		flex-direction: column;
+    }
+
+    .fo_szoveg {
+        max-width: 95%;
+    }
+
+    .footer {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .lablec {
+        text-align: left;
+    }
+
+    .nocopy {
+        text-align: right;
+    }
+	.footer {
+		flex-direction: column;
+		align-items: center;}
+    
+    .reklam {
+        line-height:1.5;}
+    #images{
+        margin:auto;
+        width: 700px;
+        height: 500px;
+        }
+    }
+   
+    
